@@ -14,8 +14,9 @@ class HomeActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        homeN = ActivityHomeBinding.inflate(layoutInflater)
-        setContentView(homeN.root)
+        homeN = DataBindingUtil.setContentView(this,R.layout.activity_home)
+        homeN.homeNesnesi=this
+
 
 
 
