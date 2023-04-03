@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="185dp"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@drawable/cerceve">
+
+        <ImageView
+            android:id="@+id/urunImg"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+            android:src="@drawable/ic_launcher_foreground"/>
+
+
+            <TextView
+                android:id="@+id/markaAdi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="marka_adi"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/urunadi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="urun_adi"/>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:layout_marginBottom="10dp">
+
+            <TextView
+                android:id="@+id/urunFiyati"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="urun_fiyat"
+                android:textColor="@color/buton_1"
+                android:textStyle="bold"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text="TL"
+                android:textColor="@color/buton_1"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+
+
+
+
+
+    </LinearLayout>
+
+
+
+
+</androidx.cardview.widget.CardView>
