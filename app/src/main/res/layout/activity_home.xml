@@ -18,6 +18,7 @@
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/tabLayout"
             android:layout_width="match_parent"
+            android:background="@drawable/cercevekosesiz"
             android:layout_height="50dp"
             android:isScrollContainer="false"
             app:layout_constraintBottom_toBottomOf="parent"

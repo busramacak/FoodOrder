@@ -65,9 +65,9 @@ class HomeActivity : AppCompatActivity() {
     }
 
     fun createTab(){
-        homeN.tabLayout.getTabAt(0)?.setText("Foods")
+        homeN.tabLayout.getTabAt(0)?.setText("Yemekler")
 
-        homeN.tabLayout.getTabAt(1)?.setText("Drinks")
+        homeN.tabLayout.getTabAt(1)?.setText("İçecekler")
     }
 
 

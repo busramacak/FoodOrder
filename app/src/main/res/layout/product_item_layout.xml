@@ -21,6 +21,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Sipariş Ver"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="?android:attr/selectableItemBackground"
                 android:textStyle="bold"
                 android:textColor="#1E0700"/>
 
