@@ -7,37 +7,39 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.bmprj.siparis.databinding.FragmentProductListBinding
 
 class ProductListFragment : Fragment() {
-    private lateinit var listN : FragmentProductListBinding
-    private lateinit var layoutManager: RecyclerView.LayoutManager
-    private lateinit var adapter: RecyclerView.Adapter<HomeProductAdapter.ViewHolder>
-
+    private lateinit var productN : FragmentProductListBinding
 
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        listN = DataBindingUtil.inflate(inflater,R.layout.fragment_product_list,container, false)
-        listN.productListFragmentNesnesi=this
+        productN = DataBindingUtil.inflate(inflater,R.layout.fragment_product_list,container, false)
+        productN.productListFragmentNesnesi=this
 
 
-        return listN.root
+        return productN.root
     }
 
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        var markalar = arrayOf("Dominto","Burgerim","Acıktım","Acıktım","Pilavcı Mehmet")
+        var urunAdlari = arrayOf("Karışık Pizza","Double Burger","Ekmek Döner","Hatay Usulü Dürüm","Nohutlu Tavuk Pilav")
+        var fiyatlar = arrayOf(47,56,25,30,20)
+        var fotiler = arrayOf(R.drawable.karisik_pizza,R.drawable.hamburger,R.drawable.ekmek_doner,
+            R.drawable.hatay_usulu_doner,R.drawable.nohutlu_tavuk_pilav)
 
-        listN.recyclerHome.apply {
+
+        productN.recyclerHome.apply {
             layoutManager= GridLayoutManager(context,2)
-            listN.recyclerHome.layoutManager=layoutManager
+            productN.recyclerHome.layoutManager=layoutManager
 
-            adapter = HomeProductAdapter()
-            listN.recyclerHome.adapter=adapter
+            adapter = ProductAdapter(markalar,urunAdlari, fiyatlar,fotiler)
+            productN.recyclerHome.adapter=adapter
         }
     }
 

@@ -1,23 +1,27 @@
 package com.bmprj.siparis
 
+import android.app.Activity
+import android.app.AlertDialog
+import android.app.Dialog
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import androidx.recyclerview.widget.RecyclerView.ViewHolder
-import com.google.firebase.ktx.Firebase
+import kotlin.coroutines.coroutineContext
 
-class HomeProductAdapter() : RecyclerView.Adapter<HomeProductAdapter.ViewHolder>() {
+class ProductAdapter(
+     markalar : Array<String>,
+     urunAdlari : Array<String>,
+     fiyatlar : Array<Int>,
+     fotiler : Array<Int>
+)  : RecyclerView.Adapter<ProductAdapter.ViewHolder>() {
 
-    var markalar = arrayOf("Dominto","Burgerim","Acıktım","Acıktım","Pilavcı Mehmet")
-    var urunAdlari = arrayOf("Karışık Pizza","Double Burger","Ekmek Döner","Hatay Usulü Dürüm","Nohutlu Tavuk Pilav")
-    var fiyatlar = arrayOf(47,56,25,30,20)
-    var fotiler = arrayOf(R.drawable.karisik_pizza,R.drawable.hamburger,R.drawable.ekmek_doner,
-        R.drawable.hatay_usulu_doner,R.drawable.nohutlu_tavuk_pilav)
-
-
+    var markalar =markalar
+    var urunAdlari =urunAdlari
+    var fiyatlar = fiyatlar
+    var fotiler = fotiler
     inner class ViewHolder(itemView: View) :RecyclerView.ViewHolder(itemView){
         var itemImg :ImageView
         var itemMarka:TextView
@@ -30,6 +34,12 @@ class HomeProductAdapter() : RecyclerView.Adapter<HomeProductAdapter.ViewHolder>
             itemUrunAd = itemView.findViewById(R.id.urunadi)
             itemFiyat = itemView.findViewById(R.id.urunFiyati)
         }
+    }
+
+
+    fun cardVClick() {
+
+
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {

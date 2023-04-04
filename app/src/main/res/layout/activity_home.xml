@@ -18,14 +18,14 @@
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/tabLayout"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/cercevekosesiz"
+            android:layout_height="50dp"
+            android:isScrollContainer="false"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:tabMode="fixed"
-            app:tabInlineLabel="true">
-
+            app:tabIndicatorColor="@color/buton_1"
+            app:tabTextAppearance="@style/TextAppearance.AppCompat.Medium"
+            app:tabTextColor="@color/buton_1">
 
         </com.google.android.material.tabs.TabLayout>
 
