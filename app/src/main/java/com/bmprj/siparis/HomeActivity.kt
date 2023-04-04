@@ -13,10 +13,13 @@ import com.bmprj.siparis.databinding.ActivityHomeBinding
 class HomeActivity : AppCompatActivity() {
     private lateinit var homeN:ActivityHomeBinding
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         homeN = DataBindingUtil.setContentView(this,R.layout.activity_home)
         homeN.homeNesnesi=this
+
+
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
             window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS)
