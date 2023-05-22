@@ -1,6 +1,6 @@
 # FoodOrder
 
-Android üzerine kendimi geliştirmek amacıyla yaptığım mini bir menü uygulaması.
+Android üzerine kendimi geliştirmek amacıyla yaptığım basit bir menü uygulaması.
 
 ### Kullanılan Teknolojiler
 
